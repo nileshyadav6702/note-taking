@@ -35,8 +35,8 @@ function createNote(Title,Category){
 //display the notes
 function displayNotes(allNotes){
     displaynotessection.innerHTML=''
-    console.log(allNotes)
-    allNotes.filter(el => el.pin == true)
+    allNotes
+      .filter((el) => el.pin == true)
       .forEach((note) => {
         let div = document.createElement("div");
         div.classList.add("card");
@@ -54,6 +54,7 @@ function displayNotes(allNotes){
         <h3>${note.title}</h3>
         <p>${note.category}</p>
         <button id=${note.id} class=pin>Pin</button>
+        <button id=${note.id} class=delete >Delete</button>
         `
         displaynotessection.appendChild(div)
     })
