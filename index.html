@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+        margin:0;
+        padding : 0;
+        box-sizing: border-box;
+        font-family:sans-serif
+        }
+        body,HTML{
+        margin:0;
+        width:100%;
+        height:100%;
+        }
+
+        #allnotes{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            height: 80vh;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: max-content;
+            height: max-content;
+            margin-inline: 10px;
+            border:2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            gap:5px;
+        }
+        #filtering{
+            margin-top: 20px;
+        }
+    </style>
+
+    <title>Note Taking app</title>
+</head>
+<body>
+    <div>
+        <h3>Create New Note</h3>
+        <input type="text" id="note" placeholder="Enter your note here">
+        <select id="category">
+            <option value="">Select A Category</option>
+            <option value="work">work</option>
+            <option value="personal">Personal</option>
+            <option value="misc">Misc</option>
+        </select>
+        <button id="createNote">Create</button>
+    </div>
+
+    <div id="filtering">
+        <h2>Filter the notes by category</h2>
+        <select id="filtercategory">
+            <option value="">Select A Category</option>
+            <option value="work">work</option>
+            <option value="personal">Personal</option>
+            <option value="misc">Misc</option>
+        </select>
+    </div>
+    <div id="allnotes">
+
+    </div>
+</body>
+</html>
+<script src="app.js"></script>
